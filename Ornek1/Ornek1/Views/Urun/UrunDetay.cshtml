@@ -1,0 +1,32 @@
+﻿@model Ornek1.Models.Urun
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-2 border">
+            <img src="@Model.ImageAdres" class="img-thumbnail"/>
+        </div>
+
+        <div class="col-10 border">
+            <h6>@Model.Ad</h6>
+            <p>@Model.Aciklama</p>
+            <p>@Model.Fiyat</p>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+
+        <h6>Ürüne Ait Yorumlar <small>@Model.Yorum.Count Adet Yorum</small> </h6>
+
+        @foreach(var yorum in Model.Yorum)
+        {
+            <div class="col-12 rounded border my-1">
+                <p>@yorum.Baslik</p> 
+                <p>@yorum.Metin</p>
+            
+            </div>
+        }
+
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+﻿@model List<Ornek1.Models.Urun>
+
+
+<div class="container">
+    
+    @foreach(var urun in Model)
+    {
+       <div class="row border-bottom">
+
+            <div class="col-2">
+                <img class="img-thumbnail" src="@urun.ImageAdres" />
+            </div>
+
+            <div class="col-10">
+                <h6>
+                    <a href="/Urun/UrunDetay/@urun.Id">@urun.Ad</a>                    
+                </h6>
+               
+                <p>Açıklama: @urun.Aciklama</p>
+
+                <label class="bg-secondary p-2 text-light rounded">Fiyat : @urun.Fiyat</label>
+
+                <strong class="bg-warning text-light">10 Yorum</strong>
+            </div>
+        </div>
+    }
+
+   
+
+</div>
