@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Ornek1\\Ornek1\\Ornek1.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\Ornek1.csproj",
       "projectName": "Ornek1",
-      "projectPath": "C:\\Users\\user\\source\\repos\\Ornek1\\Ornek1\\Ornek1.csproj",
+      "projectPath": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\Ornek1.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\Ornek1\\Ornek1\\obj\\",
+      "outputPath": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
