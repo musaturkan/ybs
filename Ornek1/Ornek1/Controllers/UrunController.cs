@@ -36,7 +36,6 @@ namespace Ornek1.Controllers
             urun.Yorum = yorumListe;
 
             return View("UrunDetay", urun);
-
         }
     }
 }
