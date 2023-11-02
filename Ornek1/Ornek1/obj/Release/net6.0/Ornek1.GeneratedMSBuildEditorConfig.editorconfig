@@ -15,22 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Source\Repos\ybs\Ornek1\Ornek1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/AnaSayfa.cshtml]
+[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/AnaSayfa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxBbmFTYXlmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/UrunDetay.cshtml]
+[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/UrunDetay.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxVcnVuRGV0YXkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/_ViewImports.cshtml]
+[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/Yorum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxZb3J1bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/_ViewStart.cshtml]
+[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/_Layout.cshtml]
+[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ntu91exd4r

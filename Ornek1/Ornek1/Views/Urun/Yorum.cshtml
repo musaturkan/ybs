@@ -1,0 +1,28 @@
+﻿@model Ornek1.Models.Urun
+
+<div class="container">
+
+    <h6>@Model.Ad ürününe yorum ekleniyor</h6>
+
+    <form action="/Urun/UrunEkle" method="post">
+
+        <input type="hidden" value="@Model.Id" name="UrunId" />
+
+        <div class="form-row">
+            <label>Başlık:</label>
+            <input class="form-control" placeholder="Yorum başlığını giriniz" name="Baslik" />
+        </div>
+
+        <div class="form-row">
+           <label>Yorum Metni:</label>
+
+           <input class="form-control" placeholder="Yorum metnini giriniz" name="Metin" />
+        </div>
+
+        <div class="form-row">
+            <button type="submit" class="btn btn-sm btn-primary">Kaydet</button>
+        </div>
+
+    </form>
+
+</div>

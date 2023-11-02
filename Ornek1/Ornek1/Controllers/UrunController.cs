@@ -35,7 +35,21 @@ namespace Ornek1.Controllers
             var urun = urunListe.FirstOrDefault(p => p.Id == id);
             urun.Yorum = yorumListe;
 
+            ViewBag.Mesaj = "Oturum bilgileri bulunamadı";
             return View("UrunDetay", urun);
+        }
+
+        [HttpGet]
+        public IActionResult UrunEkle()
+        {
+            return View("Yorum");
+        }
+
+        [HttpPost]
+        public IActionResult UrunEkle(Models.Yorum yeniYorum)
+        {
+            yeniYorum.EklemeTarihi = DateTime.Now;
+            return RedirectToAction("Index");   
         }
     }
 }
