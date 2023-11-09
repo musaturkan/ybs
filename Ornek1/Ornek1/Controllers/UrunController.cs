@@ -5,6 +5,7 @@ namespace Ornek1.Controllers
 {
     [Log]
     [Hata]
+    [Kontrol]
     public class UrunController : Controller
     {
         List<Models.Yorum> yorumListe = new List<Models.Yorum>
@@ -34,6 +35,7 @@ namespace Ornek1.Controllers
         }
 
         //[Log]
+        //[Kontrol]
         public IActionResult UrunDetay(int id)
         {
             var urun = urunListe.FirstOrDefault(p => p.Id == id);

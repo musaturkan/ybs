@@ -2,6 +2,16 @@
 
 namespace Ornek1.ViewComponents;
 
+/// <summary>
+/// Bir sınıf view component olması için aşağıdakilerden birisi uygulanır
+/// -ViewComponent sınıfından türetilerek oluşturulan sınıflar view component olur
+/// -ViewComponent attribute ile bildirilen sınıflar
+/// -sınıf adının sonunda ViewComponent bulunan sınıflar
+/// -Yukardakilerden birisi ile birlikte sınıf Invoke metoduna sahip olmalıdır.
+/// -Invoke medotu geri dönüş tipi IViewComponentResult tipinde olmalıdır
+/// </summary>
+
+   //[ViewComponent]
     public class KategoriViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke()

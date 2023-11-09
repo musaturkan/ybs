@@ -8,7 +8,7 @@ namespace Ornek1.Models
         [Key]
         public int Id { get; set; }
         public string Ad { get; set; }
-        public int Fiyat { get; set; }
+        public decimal Fiyat { get; set; }
         public string Aciklama { get; set; }
 
         [ForeignKey("Marka")]
@@ -16,5 +16,10 @@ namespace Ornek1.Models
         public string ImageAdres { get; set; }
         public Models.Marka Marka { get; set; }
         public ICollection<Yorum> Yorum { get; set; }
+
+        [ForeignKey("Kategori")]
+        public int KategoriId { get; set; }
+        public virtual Kategori Kategori { get; set; }
+
     }
 }
