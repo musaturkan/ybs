@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Ornek1.Attributes;
 
 namespace Ornek1.Controllers
 {
+    [Log]
+    [Hata]
     public class UrunController : Controller
     {
         List<Models.Yorum> yorumListe = new List<Models.Yorum>
@@ -30,6 +33,7 @@ namespace Ornek1.Controllers
             return View("AnaSayfa",urunListe);
         }
 
+        //[Log]
         public IActionResult UrunDetay(int id)
         {
             var urun = urunListe.FirstOrDefault(p => p.Id == id);
@@ -40,6 +44,7 @@ namespace Ornek1.Controllers
         }
 
         [HttpGet]
+        //[Log]
         public IActionResult UrunEkle()
         {
             return View("Yorum");
