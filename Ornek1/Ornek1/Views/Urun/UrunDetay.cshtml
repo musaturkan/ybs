@@ -38,5 +38,11 @@
     <div class="row">
         <partial name="Yorum" model="@Model" />
     </div>
+    <div class="row">
+        <div class="col-4">
+                @await Component.InvokeAsync("Kategori")
+        </div>
 
+    </div>
+ 
 </div>

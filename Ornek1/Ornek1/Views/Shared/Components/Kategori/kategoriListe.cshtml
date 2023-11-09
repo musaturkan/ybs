@@ -1,0 +1,19 @@
+﻿@model List<Ornek1.Models.Kategori>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <tbody>
+                @foreach(var kategori in Model)
+                {
+                    <tr>
+                        <td>@kategori.Id</td>
+                        <td>@kategori.Ad</td>
+                        <td>@kategori.KisaAd</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
