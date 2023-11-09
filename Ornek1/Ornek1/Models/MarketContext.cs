@@ -11,7 +11,7 @@ namespace Ornek1.Models
         public DbSet<Kategori> Kategori { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = localhost; Database = Market; Trusted_Connection = True;");
+            optionsBuilder.UseSqlServer("Server = localhost; Database = Market; Trusted_Connection = True; TrustServerCertificate=True");
         }
     }
 }
