@@ -3,6 +3,8 @@
 
 <div class="container">
     
+    @await Component.InvokeAsync("Marka",new{urun=Model.FirstOrDefault()})
+
     @foreach(var urun in Model)
     {
        <div class="row border-bottom">

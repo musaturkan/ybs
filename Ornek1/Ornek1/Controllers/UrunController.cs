@@ -51,5 +51,22 @@ namespace Ornek1.Controllers
             yeniYorum.EklemeTarihi = DateTime.Now;
             return RedirectToAction("Index");   
         }
+
+        /// <summary>
+        /// Herhangi bir view partial view olarak döndürülmek istenirse PartialView metodu ile 
+        /// döndürülür. Böylece safa view tasarımı elde edilmiş olur.
+        /// Ajax isteklerinde partial view sıklıkla kullanılır.
+        /// </summary>
+        /// <returns></returns>
+        public PartialViewResult UrunListePartial()
+        {
+            return PartialView("UrunDetay");
+        }
+
+        //IActionResult
+        //PartialViewResult
+        //ActionResult
+        //FileResult
+       
     }
 }

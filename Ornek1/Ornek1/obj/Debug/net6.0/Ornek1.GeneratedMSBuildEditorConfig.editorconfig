@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Source\Repos\ybs\Ornek1\Ornek1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/Components/Marka/markaListe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWFya2FcbWFya2FMaXN0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/_baslik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9iYXNsaWsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/_footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9mb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/AnaSayfa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxBbmFTYXlmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
