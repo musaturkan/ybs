@@ -16,3 +16,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.yorum-baslik{
+    font-size:0.8rem;
+    font-weight:bold;
+}
+
+.yorum-metin{
+    font-size:0.7rem;    
+}
+
+.yorum-dis-kutu {
+    background-color: #dfeee4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+}

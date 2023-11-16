@@ -50,9 +50,18 @@ namespace Ornek1.Controllers
         {
             //var urun = urunListe.FirstOrDefault(p => p.Id == id);
             //urun.Yorum = yorumListe;
-
             //ViewBag.Mesaj = "Oturum bilgileri bulunamadı";
-            return View("UrunDetay");
+            Models.MarketContext model = new Models.MarketContext();
+            ///Tek bir ürün kaydını Urun cinsinden bir nesne olarak elde etme
+            var urun=model.Urun
+                    .Include("Yorum.Kullanici")
+                    .Include(m=>m.Marka)
+                    .FirstOrDefault(p=>p.Id==id);
+
+            ///Birden fazla ürün kaydını Urün listesi olarak elde etme
+            var ikinciListe = model.Urun.Where(u => u.Fiyat > 2000).ToList();
+
+            return View("UrunDetay",urun);
         }
 
         [HttpGet]
@@ -66,6 +75,11 @@ namespace Ornek1.Controllers
         public IActionResult UrunEkle(Models.Yorum yeniYorum)
         {
             yeniYorum.EklemeTarihi = DateTime.Now;
+
+            Models.MarketContext model = new Models.MarketContext();
+            model.Yorum.Add(yeniYorum);
+            model.SaveChanges();
+
             return RedirectToAction("Index");   
         }
 

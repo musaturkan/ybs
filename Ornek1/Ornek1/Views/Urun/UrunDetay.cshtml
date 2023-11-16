@@ -1,7 +1,5 @@
 ﻿@model Ornek1.Models.Urun
 
-
-
 <div class="container">
     
     <h6>@ViewBag.Mesaj</h6>
@@ -20,20 +18,14 @@
         </div>
     </div>
     <hr />
+   
+
     <div class="row">
-
-        <h6>Ürüne Ait Yorumlar <small>@Model.Yorum.Count Adet Yorum</small> </h6>
-
-        @foreach(var yorum in Model.Yorum)
-        {
-            <div class="col-12 rounded border my-1">
-                <p>@yorum.Baslik</p> 
-                <p>@yorum.Metin</p>
-            
-            </div>
-        }
+        <h6>@Model.Yorum.Count Adet yorum bulunmaktadır.</h6>
+        <partial name="_urunYorumListe" model="@Model.Yorum.ToList()"/>
 
     </div>
+
 
     <div class="row">
         <partial name="Yorum" model="@Model" />

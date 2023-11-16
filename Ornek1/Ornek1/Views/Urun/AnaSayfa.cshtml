@@ -33,6 +33,15 @@
 
                 <strong class="bg-warning text-light">@urun.Yorum.Count Yorum</strong>
             </div>
+
+            @*yorumlar burda listelencek*@
+
+            <div class="col-6">
+                 <partial name="_urunYorumListe" model="@urun.Yorum.ToList()"/>
+            </div>
+
+          
+
         </div>
     }
 

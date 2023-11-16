@@ -1,0 +1,28 @@
+﻿@model List<Ornek1.Models.Yorum>
+
+
+@foreach(var yorum in Model)
+{
+    <div class="row border py-2">
+        <div class="col-1">
+            <label class="badge bg-secondary">
+                <small>
+                        @yorum.Kullanici.Ad.FirstOrDefault().ToString().ToUpper()     
+                </small>
+                    
+            </label>
+        </div>
+        <div class="col-10 bg-light">
+            <p class="badge bg-info p-1" style="font-size:0.5rem;">
+                
+                @yorum.EklemeTarihi - @yorum.Kullanici.Ad @yorum.Kullanici.Soyad
+                
+            </p>
+            <div class="col-8 rounded yorum-dis-kutu">
+                <p class="yorum-baslik p-1 m-0">@yorum.Baslik</p>
+                <p class="yorum-metin p-1 m-0">@yorum.Metin</p>
+            </div>
+        </div>
+
+    </div>
+}
