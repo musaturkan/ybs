@@ -14,12 +14,9 @@ namespace Ornek1.Models
         [ForeignKey("Marka")]
         public int? MarkaId { get; set; }
         public string? ImageAdres { get; set; }
-        public Models.Marka Marka { get; set; }
-        public ICollection<Yorum> Yorum { get; set; }
-
-        [ForeignKey("Kategori")]
-        public int? KategoriId { get; set; }
-        public virtual Kategori Kategori { get; set; }
+        public Models.Marka? Marka { get; set; }
+        public virtual ICollection<Yorum>? Yorum { get; set; }
+        public virtual ICollection<UrunKategori>? UrunKategori { get; set; }
 
     }
 }

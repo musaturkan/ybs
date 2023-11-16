@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Ornek1.Attributes;
 
 namespace Ornek1.Controllers
@@ -15,34 +16,43 @@ namespace Ornek1.Controllers
             new Models.Yorum{Baslik="Fotoğraftaki ürün geldi",Metin=" tavsiye ederim"}
         };
 
-        List<Models.Urun> urunListe = new List<Models.Urun>
-        {
-            new Models.Urun{Id = 1000,Ad="Televizyon",Aciklama="Led tv",Fiyat=1587,
-            ImageAdres="https://productimages.hepsiburada.net/s/428/550/110000459621183.jpg/format:webp"
-          },
+        //List<Models.Urun> urunListe = new List<Models.Urun>
+        //{
+        //    new Models.Urun{Id = 1000,Ad="Televizyon",Aciklama="Led tv",Fiyat=1587,
+        //    ImageAdres="https://productimages.hepsiburada.net/s/428/550/110000459621183.jpg/format:webp"
+        //  },
             
-            new Models.Urun{Id = 1010,Ad="Kulaklık",Aciklama="Kulak içi kulaklık",Fiyat=5410,
-            ImageAdres="https://productimages.hepsiburada.net/s/482/550/110000527574937.jpg/format:webp"
-          },
+        //    new Models.Urun{Id = 1010,Ad="Kulaklık",Aciklama="Kulak içi kulaklık",Fiyat=5410,
+        //    ImageAdres="https://productimages.hepsiburada.net/s/482/550/110000527574937.jpg/format:webp"
+        //  },
 
-            new Models.Urun{Id = 1020,Ad="Telefon",Aciklama="Akıllı telefon",Fiyat=2547,
-            ImageAdres="https://productimages.hepsiburada.net/s/374/1100/110000391904798.jpg/format:webp"
-          },
-        };
+        //    new Models.Urun{Id = 1020,Ad="Telefon",Aciklama="Akıllı telefon",Fiyat=2547,
+        //    ImageAdres="https://productimages.hepsiburada.net/s/374/1100/110000391904798.jpg/format:webp"
+        //  },
+        //};
         public IActionResult Index()
         {
-            return View("AnaSayfa",urunListe);
+            ///Entity model nesnesi oluşturulur. Context sınıfı kullanılır
+            ///
+            Models.MarketContext model=new Models.MarketContext();
+            List<Models.Urun> urunListesi = model.Urun.Include(m=>m.Marka)
+                                            .Include(y=>y.Yorum)
+                                            .ThenInclude(k=>k.Kullanici)
+                                            //.Include("Yorum.Kullanici")
+                                            .ToList();
+
+            return View("AnaSayfa", urunListesi);
         }
 
         //[Log]
         //[Kontrol]
         public IActionResult UrunDetay(int id)
         {
-            var urun = urunListe.FirstOrDefault(p => p.Id == id);
-            urun.Yorum = yorumListe;
+            //var urun = urunListe.FirstOrDefault(p => p.Id == id);
+            //urun.Yorum = yorumListe;
 
-            ViewBag.Mesaj = "Oturum bilgileri bulunamadı";
-            return View("UrunDetay", urun);
+            //ViewBag.Mesaj = "Oturum bilgileri bulunamadı";
+            return View("UrunDetay");
         }
 
         [HttpGet]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Pegn9tXz2R8rjcjrUrJK4VvLrYpdSJOb9UHeAS5GnKQ=",
+  "Hash": "GIhJEEJNRojZJs/2C5UowlaUqK5j6JLqtQKxKINC+00=",
   "Source": "Ornek1",
   "BasePath": "_content/Ornek1",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Ornek1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\wwwroot\\css\\Market.bak",
+      "SourceId": "Ornek1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\wwwroot\\",
+      "BasePath": "_content/Ornek1",
+      "RelativePath": "css/Market.bak",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Market.bak"
     },
     {
       "Identity": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\wwwroot\\css\\site.css",

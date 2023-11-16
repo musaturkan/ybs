@@ -10,12 +10,15 @@ namespace Ornek1.Models
         public string Baslik { get; set; }
         public string Metin { get; set; }
         public DateTime EklemeTarihi { get; set; }
+
         [ForeignKey("Urun")]
         public int? UrunId { get; set; }
-        public Models.Urun Urun { get; set; }
 
         [ForeignKey("Kullanici")]
         public int? KullaniciId { get; set; }
-        public Kullanici Kullanici { get; set; }
+
+        public virtual Models.Urun? Urun { get; set; }
+       
+        public virtual Kullanici? Kullanici { get; set; }
     }
 }

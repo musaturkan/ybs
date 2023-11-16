@@ -8,9 +8,9 @@ namespace Ornek1.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Ad { get; set; }
-        public string LogoAdresi { get; set; }
-        public string WebAdresi { get; set; }
-        public ICollection<Urun> Urun { get; set; }
+        public string? Ad { get; set; }
+        public string? LogoAdresi { get; set; }
+        public string? WebAdresi { get; set; }
+        public virtual ICollection<Urun>? Urun { get; set; }
     }
 }
