@@ -7,13 +7,22 @@
 
     @foreach(var urun in Model)
     {
-       <div class="row border-bottom">
+        <div class="row border-bottom">
 
             <div class="col-2">
-                <img class="img-thumbnail" src="@urun.ImageAdres" />
+                @if (urun.ImageAdres == null)
+                {
+                    <label>Resim bulunamadı</label>
+                }
+                else
+                {
+                     <img class="img-thumbnail" src="@urun.ImageAdres" />
+                }
+               
             </div>
 
             <div class="col-10">
+                <p>Marka:@urun.Marka?.Ad</p>
                 <h6>
                     <a href="/Urun/UrunDetay/@urun.Id">@urun.Ad</a>                    
                 </h6>
@@ -22,7 +31,7 @@
 
                 <label class="bg-secondary p-2 text-light rounded">Fiyat : @urun.Fiyat</label>
 
-                <strong class="bg-warning text-light">10 Yorum</strong>
+                <strong class="bg-warning text-light">@urun.Yorum.Count Yorum</strong>
             </div>
         </div>
     }
