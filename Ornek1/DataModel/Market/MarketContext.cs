@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-namespace Ornek1.Models
+namespace DataModel.Market
 {
     public class MarketContext : DbContext
     {

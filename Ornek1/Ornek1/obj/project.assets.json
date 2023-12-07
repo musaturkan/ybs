@@ -868,6 +868,20 @@
             "rid": "win"
           }
         }
+      },
+      "DataModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.25",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25"
+        },
+        "compile": {
+          "bin/placeholder/DataModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModel.dll": {}
+        }
       }
     }
   },
@@ -2690,10 +2704,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "DataModel/1.0.0": {
+      "type": "project",
+      "path": "../DataModel/DataModel.csproj",
+      "msbuildProject": "../DataModel/DataModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DataModel >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13"
@@ -2725,7 +2745,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\DataModel\\DataModel.csproj": {
+              "projectPath": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\DataModel\\DataModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

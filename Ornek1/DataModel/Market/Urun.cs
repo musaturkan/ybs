@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Ornek1.Models
+namespace DataModel.Market
 {
     public class Urun
     {
@@ -14,7 +14,7 @@ namespace Ornek1.Models
         [ForeignKey("Marka")]
         public int? MarkaId { get; set; }
         public string? ImageAdres { get; set; }
-        public Models.Marka? Marka { get; set; }
+        public Marka? Marka { get; set; }
         public virtual ICollection<Yorum>? Yorum { get; set; }
         public virtual ICollection<UrunKategori>? UrunKategori { get; set; }
 

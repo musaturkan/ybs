@@ -15,50 +15,50 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Source\Repos\ybs\Ornek1\Ornek1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Shared/Components/Kategori/kategoriListe.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/Components/Kategori/kategoriListe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcS2F0ZWdvcmlca2F0ZWdvcmlMaXN0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Shared/Components/Marka/markaListe.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/Components/Marka/markaListe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWFya2FcbWFya2FMaXN0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Shared/_baslik.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/_baslik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9iYXNsaWsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Shared/_footer.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/_footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9mb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/AnaSayfa.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/AnaSayfa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxBbmFTYXlmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/UrunDetay.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/UrunDetay.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxVcnVuRGV0YXkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/UrunEkle.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/UrunEkle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxVcnVuRWtsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/Yorum.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/Yorum.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxZb3J1bS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Urun/_urunYorumListe.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Urun/_urunYorumListe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1blxfdXJ1bllvcnVtTGlzdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/_ViewImports.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/_ViewStart.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/ybs/Ornek1/Ornek1/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Source/Repos/ybs/Ornek1/Ornek1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ntu91exd4r

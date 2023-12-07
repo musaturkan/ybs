@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ornek1", "Ornek1\Ornek1.csproj", "{95C8BFB9-3135-42F3-AC1B-D2A4FCAD46E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ornek1", "Ornek1\Ornek1.csproj", "{95C8BFB9-3135-42F3-AC1B-D2A4FCAD46E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{6355560A-48AF-475D-A092-AFA459315BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{95C8BFB9-3135-42F3-AC1B-D2A4FCAD46E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C8BFB9-3135-42F3-AC1B-D2A4FCAD46E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C8BFB9-3135-42F3-AC1B-D2A4FCAD46E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6355560A-48AF-475D-A092-AFA459315BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6355560A-48AF-475D-A092-AFA459315BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6355560A-48AF-475D-A092-AFA459315BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6355560A-48AF-475D-A092-AFA459315BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

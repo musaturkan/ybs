@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Ornek1.Attributes;
+using DataModel.Market;
 
 namespace Ornek1.Controllers
 {
@@ -9,11 +10,11 @@ namespace Ornek1.Controllers
     [Kontrol]
     public class UrunController : Controller
     {
-        List<Models.Yorum> yorumListe = new List<Models.Yorum>
+        List<Yorum> yorumListe = new List<Yorum>
         {
-            new Models.Yorum{Baslik="Ürün çok güzel",Metin="Kaliteli bir ürün tavsiye ederim"},
-            new Models.Yorum{Baslik="Farklı ürün geldi",Metin="Firma dolandırıcı almayın"},
-            new Models.Yorum{Baslik="Fotoğraftaki ürün geldi",Metin=" tavsiye ederim"}
+            new Yorum{Baslik="Ürün çok güzel",Metin="Kaliteli bir ürün tavsiye ederim"},
+            new Yorum{Baslik="Farklı ürün geldi",Metin="Firma dolandırıcı almayın"},
+            new Yorum{Baslik="Fotoğraftaki ürün geldi",Metin=" tavsiye ederim"}
         };
 
         //List<Models.Urun> urunListe = new List<Models.Urun>
@@ -34,8 +35,8 @@ namespace Ornek1.Controllers
         {
             ///Entity model nesnesi oluşturulur. Context sınıfı kullanılır
             ///
-            Models.MarketContext model=new Models.MarketContext();
-            List<Models.Urun> urunListesi = model.Urun
+            MarketContext model=new MarketContext();
+            List<Urun> urunListesi = model.Urun
                                             .Include(m=>m.Marka)
                                             .Include(y=>y.Yorum)
                                             .ThenInclude(k=>k.Kullanici)
@@ -52,7 +53,7 @@ namespace Ornek1.Controllers
             //var urun = urunListe.FirstOrDefault(p => p.Id == id);
             //urun.Yorum = yorumListe;
             //ViewBag.Mesaj = "Oturum bilgileri bulunamadı";
-            Models.MarketContext model = new Models.MarketContext();
+            MarketContext model = new MarketContext();
             ///Tek bir ürün kaydını Urun cinsinden bir nesne olarak elde etme
             var urun=model.Urun
                     .Include("Yorum.Kullanici")
@@ -69,16 +70,16 @@ namespace Ornek1.Controllers
         //[Log]
         public IActionResult UrunEkle()
         {
-            Models.MarketContext model = new Models.MarketContext();
+            MarketContext model = new MarketContext();
             var markaListesi = model.Marka.ToList();
 
             return View("UrunEkle",markaListesi);
         }
 
         [HttpPost]
-        public IActionResult UrunEkle(Models.Urun yeniUrun)
+        public IActionResult UrunEkle(Urun yeniUrun)
         {
-            Models.MarketContext model = new Models.MarketContext();
+            MarketContext model = new MarketContext();
             model.Urun.Add(yeniUrun);
             model.SaveChanges();
 
@@ -87,11 +88,11 @@ namespace Ornek1.Controllers
 
 
         [HttpPost]
-        public IActionResult YorumEkle(Models.Yorum yeniYorum)
+        public IActionResult YorumEkle(Yorum yeniYorum)
         {
             yeniYorum.EklemeTarihi = DateTime.Now;
 
-            Models.MarketContext model = new Models.MarketContext();
+            MarketContext model = new MarketContext();
             model.Yorum.Add(yeniYorum);
 
             model.SaveChanges();

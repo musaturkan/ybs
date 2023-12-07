@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Ornek1.Models
-{
+namespace DataModel.Market
+{ 
     public class Yorum
     {
         [Key]
@@ -17,7 +17,7 @@ namespace Ornek1.Models
         [ForeignKey("Kullanici")]
         public int? KullaniciId { get; set; }
 
-        public virtual Models.Urun? Urun { get; set; }
+        public virtual Urun? Urun { get; set; }
        
         public virtual Kullanici? Kullanici { get; set; }
     }
