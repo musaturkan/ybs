@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataModel.Market
 { 
+    [Table("Yorum")]
     public class Yorum
     {
         [Key]

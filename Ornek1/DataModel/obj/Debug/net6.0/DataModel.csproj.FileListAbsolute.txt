@@ -1,0 +1,12 @@
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\bin\Debug\net6.0\DataModel.deps.json
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\bin\Debug\net6.0\DataModel.dll
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\bin\Debug\net6.0\ref\DataModel.dll
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\bin\Debug\net6.0\DataModel.pdb
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.dll
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.pdb
