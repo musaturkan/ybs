@@ -7,7 +7,7 @@
         <div class="col-1">
             <label class="badge bg-secondary">
                 <small>
-                        @yorum.Kullanici.Ad.FirstOrDefault().ToString().ToUpper()     
+                        @yorum.Kullanici?.Ad.FirstOrDefault().ToString().ToUpper()     
                 </small>
                     
             </label>
@@ -15,7 +15,7 @@
         <div class="col-10 bg-light">
             <p class="badge bg-info p-1" style="font-size:0.5rem;">
                 
-                @yorum.EklemeTarihi - @yorum.Kullanici.Ad @yorum.Kullanici.Soyad
+                @yorum.EklemeTarihi - @yorum.Kullanici?.Ad @yorum.Kullanici?.Soyad
                 
             </p>
             <div class="col-8 rounded yorum-dis-kutu">

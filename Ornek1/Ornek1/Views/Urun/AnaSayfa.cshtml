@@ -3,7 +3,7 @@
 
 <div class="container">
     
-    @await Component.InvokeAsync("Marka",new{urun=Model.FirstOrDefault()})
+@*    @await Component.InvokeAsync("Marka",new{urun=Model.FirstOrDefault()})*@
 
     @foreach(var urun in Model)
     {
@@ -47,6 +47,6 @@
 
    
 
-    @await Component.InvokeAsync("Kategori")
+ @*   @await Component.InvokeAsync("Kategori")*@
 
 </div>

@@ -35,7 +35,8 @@ namespace Ornek1.Controllers
             ///Entity model nesnesi oluşturulur. Context sınıfı kullanılır
             ///
             Models.MarketContext model=new Models.MarketContext();
-            List<Models.Urun> urunListesi = model.Urun.Include(m=>m.Marka)
+            List<Models.Urun> urunListesi = model.Urun
+                                            .Include(m=>m.Marka)
                                             .Include(y=>y.Yorum)
                                             .ThenInclude(k=>k.Kullanici)
                                             //.Include("Yorum.Kullanici")
@@ -68,16 +69,22 @@ namespace Ornek1.Controllers
         //[Log]
         public IActionResult UrunEkle()
         {
-            return View("Yorum");
+            Models.MarketContext model = new Models.MarketContext();
+            var markaListesi = model.Marka.ToList();
+
+            return View("UrunEkle",markaListesi);
         }
 
+
+
         [HttpPost]
-        public IActionResult UrunEkle(Models.Yorum yeniYorum)
+        public IActionResult YorumEkle(Models.Yorum yeniYorum)
         {
             yeniYorum.EklemeTarihi = DateTime.Now;
 
             Models.MarketContext model = new Models.MarketContext();
             model.Yorum.Add(yeniYorum);
+
             model.SaveChanges();
 
             return RedirectToAction("Index");   
