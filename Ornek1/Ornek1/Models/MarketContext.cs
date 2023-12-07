@@ -11,6 +11,7 @@ namespace Ornek1.Models
         public DbSet<Kullanici> Kullanici { get; set; }
         public DbSet<Kategori> Kategori { get; set; }
         public DbSet<UrunKategori> UrunKategori { get;set; }
+        public DbSet<Log> Log { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

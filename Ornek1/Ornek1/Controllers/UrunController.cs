@@ -75,6 +75,15 @@ namespace Ornek1.Controllers
             return View("UrunEkle",markaListesi);
         }
 
+        [HttpPost]
+        public IActionResult UrunEkle(Models.Urun yeniUrun)
+        {
+            Models.MarketContext model = new Models.MarketContext();
+            model.Urun.Add(yeniUrun);
+            model.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
 
         [HttpPost]

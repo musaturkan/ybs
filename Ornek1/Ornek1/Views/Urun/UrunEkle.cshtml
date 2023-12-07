@@ -5,7 +5,7 @@
 
         <div class="col">
             <h5>Yeni Ürün Ekleme</h5>
-            <form action="/urum/urunEkle" method="post">
+            <form action="/Urun/urunEkle" method="post">
 
                 <div class="form-row">
                     <div class="col-12 mb-3">
@@ -34,13 +34,18 @@
                    </div>
 
                    <div class="form-floating mb-3">
-                      <input required type="text" class="form-control" id="floatingInput" placeholder="Ürün açıklamasını giriniz">
+                      <input required type="text" class="form-control" name="Aciklama" id="floatingInput" placeholder="Ürün açıklamasını giriniz">
                       <label for="floatingInput">Ürün Açıklama:</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                      <input required type="number" class="form-control" id="urun_fiyat" placeholder="Ürün fiyatını giriniz">
+                      <input required type="number" class="form-control" name="Fiyat" id="urun_fiyat" placeholder="Ürün fiyatını giriniz">
                       <label for="floatingInput">Ürün Fiyatı:</label>
+                    </div>
+
+                     <div class="form-floating mb-3">
+                      <input required type="text" class="form-control" name="ImageAdres" id="urun-fotograf" placeholder="Ürün fiyatını giriniz">
+                      <label for="urun_fotograf">Ürün Fotoğraf Adresi:</label>
                     </div>
                </div>
 
