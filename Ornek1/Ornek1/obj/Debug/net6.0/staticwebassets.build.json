@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GIhJEEJNRojZJs/2C5UowlaUqK5j6JLqtQKxKINC+00=",
+  "Hash": "/EBGzLOwcBMKqgxz52lIjhlpJgLmpbhC5aooXuliJVg=",
   "Source": "Ornek1",
   "BasePath": "_content/Ornek1",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Market.bak"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\wwwroot\\css\\market2.bak",
+      "SourceId": "Ornek1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\wwwroot\\",
+      "BasePath": "_content/Ornek1",
+      "RelativePath": "css/market2.bak",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\market2.bak"
     },
     {
       "Identity": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\wwwroot\\css\\site.css",

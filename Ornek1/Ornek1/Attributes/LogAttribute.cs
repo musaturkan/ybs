@@ -6,8 +6,8 @@ namespace Ornek1.Attributes
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            Models.MarketContext model=new Models.MarketContext();
-            Models.Log yeniLog = new Models.Log();
+            DataModel.Market.MarketContext model=new DataModel.Market.MarketContext();
+            DataModel.Market.Log yeniLog = new DataModel.Market.Log();
 
             yeniLog.Ip= context.HttpContext.Request.Host.Value.ToString();
             yeniLog.MetotAdi = context.ActionDescriptor.DisplayName;

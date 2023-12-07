@@ -48,6 +48,7 @@ namespace Ornek1.Controllers
 
         //[Log]
         //[Kontrol]
+        [Route("Urun/{id:int=8}")]
         public IActionResult UrunDetay(int id)
         {
             //var urun = urunListe.FirstOrDefault(p => p.Id == id);
