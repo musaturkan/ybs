@@ -1,0 +1,33 @@
+﻿
+@if (ViewBag.Mesa != null)
+{
+    
+    <h6 class="text-danger">@ViewBag.Mesaj</h6>
+
+}
+
+<h1>Burası giriş formu olacak</h1>
+
+<div class="container">
+    <div>
+        <form method="post" asp-action="OturumAc">
+
+            <div class="form-row">
+                <label>Kullanıcı Adı:</label>
+                <input name="KullaniciAdi" type="text" class="form-control"/>
+            </div>
+
+              <div class="form-row">
+                <label>Parola:</label>
+                <input name="Parola" type="password" class="form-control" />
+            </div>
+
+              <div class="form-row">
+               
+                  <button type="submit" class="btn btn-primary">Kaydet</button>
+                
+            </div>
+        </form>
+    </div>
+
+</div>

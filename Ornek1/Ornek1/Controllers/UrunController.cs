@@ -43,6 +43,13 @@ namespace Ornek1.Controllers
                                             //.Include("Yorum.Kullanici")
                                             .ToList();
 
+            var tarihCerez = Request.Cookies["Tarih"];
+
+            if (tarihCerez != null)
+            {
+                ViewBag.GirisTarihi = tarihCerez;
+            }
+
             return View("AnaSayfa", urunListesi);
         }
 
