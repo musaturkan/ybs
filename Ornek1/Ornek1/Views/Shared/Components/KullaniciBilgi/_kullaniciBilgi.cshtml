@@ -1,0 +1,20 @@
+﻿@model DataModel.Market.Kullanici
+
+@if(Model!=null && Model.Id>0)
+{
+   <div class="d-flex justify-content-end">
+
+       <span class="badge badge-warning display-3">@Model.Ad.ToUpper().FirstOrDefault() </span>
+        <label>@Model.Ad @Model.Soyad</label>
+
+   </div> 
+
+}
+else{
+    <div class="d-flex justify-content-end">
+      <a href="/Oturum/Index" class="btn btn-info">Oturum Aç</a>
+
+    </div>
+   
+}
+

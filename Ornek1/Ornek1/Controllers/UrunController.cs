@@ -31,6 +31,7 @@ namespace Ornek1.Controllers
         //    ImageAdres="https://productimages.hepsiburada.net/s/374/1100/110000391904798.jpg/format:webp"
         //  },
         //};
+
         public IActionResult Index()
         {
             ///Entity model nesnesi oluşturulur. Context sınıfı kullanılır

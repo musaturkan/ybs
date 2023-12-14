@@ -10,9 +10,14 @@
 </head>
 <body>
  
+
+
+   @await Component.InvokeAsync("KullaniciBilgi")
+    
     <partial name="_baslik"/>
 
     <div class="container">
+    
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

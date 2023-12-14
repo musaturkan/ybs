@@ -1,5 +1,5 @@
 ﻿
-@if (ViewBag.Mesa != null)
+@if (ViewBag.Mesaj != null)
 {
     
     <h6 class="text-danger">@ViewBag.Mesaj</h6>
@@ -10,11 +10,15 @@
 
 <div class="container">
     <div>
+        @if (ViewBag.Tarih != null)
+        {
+            <h5>@ViewBag.Tarih</h5>
+        }
         <form method="post" asp-action="OturumAc">
 
             <div class="form-row">
                 <label>Kullanıcı Adı:</label>
-                <input name="KullaniciAdi" type="text" class="form-control"/>
+                <input name="KullaniciAdi" type="text" value="@ViewBag.UserCerez" class="form-control"/>
             </div>
 
               <div class="form-row">
