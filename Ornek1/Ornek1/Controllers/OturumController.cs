@@ -2,10 +2,14 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Ornek1.Attributes;
 using System.Security.Claims;
+using System.Text.Json;
 
 namespace Ornek1.Controllers
 {
+    [Hata]
+    [Log]
     public class OturumController : Controller
     {
         public IActionResult Index()
@@ -41,6 +45,8 @@ namespace Ornek1.Controllers
             var oturumKullanici=model.Kullanici.FirstOrDefault(k=>k.KullaniciAdi==kullanici.KullaniciAdi && k.Parola==kullanici.Parola);
             if (oturumKullanici != null)
             {
+                string jsonKullanici= JsonSerializer.Serialize(oturumKullanici);
+
                 ///Claims based Authorization
                 ///Claim nesne listesi oluşturularak saklanmak istenen oturum verileri bu listeye anahtar değer çifti olarak eklenebilri
                 var claims = new List<Claim>();
@@ -50,6 +56,7 @@ namespace Ornek1.Controllers
                 claims.Add(new Claim("Soyad", oturumKullanici.Soyad));
                 claims.Add(new Claim("KullaniciAdi", oturumKullanici.KullaniciAdi));
                 claims.Add(new Claim("KayitTarihi", oturumKullanici.KayitTarihi.ToString()));
+                claims.Add(new Claim("JsonKullanici",jsonKullanici));
 
                 ///ClaimsIdentiy nesnesi yukarıdaki claims listesi ile oluşturulur
                 var claimsKimlik = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

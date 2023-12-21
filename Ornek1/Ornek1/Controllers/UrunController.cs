@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Ornek1.Attributes;
 using DataModel.Market;
+using System.Text.Json;
 
 namespace Ornek1.Controllers
 {
@@ -11,12 +12,20 @@ namespace Ornek1.Controllers
   
     public class UrunController : Controller
     {
-        List<Yorum> yorumListe = new List<Yorum>
-        {
-            new Yorum{Baslik="Ürün çok güzel",Metin="Kaliteli bir ürün tavsiye ederim"},
-            new Yorum{Baslik="Farklı ürün geldi",Metin="Firma dolandırıcı almayın"},
-            new Yorum{Baslik="Fotoğraftaki ürün geldi",Metin=" tavsiye ederim"}
-        };
+        //List<Yorum> yorumListe = new List<Yorum>
+        //{
+        //    new Yorum{Baslik="Ürün çok güzel",Metin="Kaliteli bir ürün tavsiye ederim"},
+        //    new Yorum{Baslik="Farklı ürün geldi",Metin="Firma dolandırıcı almayın"},
+        //    new Yorum{Baslik="Fotoğraftaki ürün geldi",Metin=" tavsiye ederim"}
+        //};
+
+        DataModel.Market.Kullanici oturumKullanici { get
+            {
+                string kullaniciJson = HttpContext.User.Claims.FirstOrDefault(p => p.Type == "JsonKullanici").Value;
+                var oturum = JsonSerializer.Deserialize<DataModel.Market.Kullanici>(kullaniciJson);
+                return oturum;
+            } 
+        }
 
         //List<Models.Urun> urunListe = new List<Models.Urun>
         //{
@@ -102,9 +111,15 @@ namespace Ornek1.Controllers
 
 
         [HttpPost]
+        [YetkiKontrol]
+        [OturumKontrol]
         public IActionResult YorumEkle(Yorum yeniYorum)
         {
+            //string kullaniciId = HttpContext.User.Claims.FirstOrDefault(p => p.Type == "KullaniciId").Value;
+
+            yeniYorum.KullaniciId = oturumKullanici.Id;//Convert.ToInt32(kullaniciId);   
             yeniYorum.EklemeTarihi = DateTime.Now;
+            
 
             MarketContext model = new MarketContext();
             model.Yorum.Add(yeniYorum);

@@ -9,8 +9,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(options =>
     {
         options.Cookie.Name = "Oturum";
-        options.LoginPath = "/Oturum/Giris";
+        options.LoginPath = "/Oturum/Index";
         //options.Cookie.Expiration = new TimeSpan(0, 0, 0);
+        
     });
 builder.Services.AddAuthorization();
 /// <summary>

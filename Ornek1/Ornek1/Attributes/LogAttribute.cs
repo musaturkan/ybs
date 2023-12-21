@@ -14,7 +14,8 @@ namespace Ornek1.Attributes
             yeniLog.MetotAdi = context.ActionDescriptor.DisplayName;
             yeniLog.TalepYapilanUrl=context.ActionDescriptor.DisplayName;
             yeniLog.Tarayici=context.HttpContext.Request.Headers["User-Agent"].ToString();
-        
+            yeniLog.Tarih = DateTime.Now;
+
             var parametreListe = context.ActionDescriptor.Parameters;
             if (parametreListe!=null && parametreListe.Count>0)
             { 
@@ -23,6 +24,14 @@ namespace Ornek1.Attributes
                 string jsonParametre = JsonSerializer.Serialize(context.ActionArguments);
                 yeniLog.Parametre = jsonParametre;
              
+            }
+
+            if (context.HttpContext.User!=null && 
+                context.HttpContext.User.Identity!=null &&
+                context.HttpContext.User.Identity.IsAuthenticated==true)
+            {
+                string userId = context.HttpContext.User.Claims.FirstOrDefault(p => p.Type == "Id").Value;
+                yeniLog.KullaniciId=Convert.ToInt32(userId);
             }
             model.Log.Add(yeniLog);
             model.SaveChanges();

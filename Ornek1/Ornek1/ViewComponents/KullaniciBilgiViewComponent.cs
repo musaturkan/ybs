@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace Ornek1.ViewComponents
 {
@@ -14,6 +15,10 @@ namespace Ornek1.ViewComponents
             else 
             {
                 var user = HttpContext.User;
+                var jsonKullanici = user.Claims.FirstOrDefault(p => p.Type == "JsonKullanici").Value;
+                var oturumUser = JsonSerializer.Deserialize<DataModel.Market.Kullanici>(jsonKullanici);
+
+
                 var kullaniciAdi = user.Claims.FirstOrDefault(p => p.Type == "KullaniciAdi").Value;
                
                 DataModel.Market.Kullanici oturumKullanici = new DataModel.Market.Kullanici();

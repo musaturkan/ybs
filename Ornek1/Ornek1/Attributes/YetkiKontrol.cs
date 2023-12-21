@@ -11,8 +11,8 @@ namespace Ornek1.Attributes
             if (context.HttpContext.User.Identity.IsAuthenticated)
             {
                 var actionDetay = context.ActionDescriptor as ControllerActionDescriptor;
-
                 DataModel.Market.MarketContext model = new DataModel.Market.MarketContext();
+
                 var kullaniciAdi = context.HttpContext.User.Claims.FirstOrDefault(p => p.Type == "KullaniciAdi").Value;
                 if (kullaniciAdi != null)
                 {
@@ -20,11 +20,17 @@ namespace Ornek1.Attributes
                     var metotRolListe = model.Yetki.Where(p => p.Metot.Ad == actionDetay.ActionName).ToList();
 
                     var rolVarMi= metotRolListe.Any(p=>kullaniciRolListe.Any(k=>k.RolId==p.RolId));
+
                     if (rolVarMi!=true)
                     {
                         context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Oturum", action = "Index" }));
                     }
                 }
+
+            }
+            else
+            {
+                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Oturum", action = "Index" }));
 
             }
         }
