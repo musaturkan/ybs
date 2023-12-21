@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using System.Text.Json;
+
 namespace Ornek1.Attributes
 {
     public class LogAttribute:ActionFilterAttribute

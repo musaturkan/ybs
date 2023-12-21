@@ -21,3 +21,4 @@ C:\Users\user\Source\Repos\ybs1\Ornek1\DataModel\obj\Debug\net6.0\DataModel.cspr
 C:\Users\user\Source\Repos\ybs1\Ornek1\DataModel\obj\Debug\net6.0\DataModel.dll
 C:\Users\user\Source\Repos\ybs1\Ornek1\DataModel\obj\Debug\net6.0\ref\DataModel.dll
 C:\Users\user\Source\Repos\ybs1\Ornek1\DataModel\obj\Debug\net6.0\DataModel.pdb
+C:\Users\user\Source\Repos\ybs\Ornek1\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache

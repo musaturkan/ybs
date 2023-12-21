@@ -66,10 +66,6 @@ namespace Ornek1.Controllers
                     new ClaimsPrincipal(claimsKimlik), authenticationProperties);
 
 
-
-              
-
-
                 //CookieOptions cerezAyar = new CookieOptions();
                 //cerezAyar.Expires = DateTime.Now.AddMinutes(30);                
                 /////Todo:Oturum çrezi şifrelenecek
@@ -83,7 +79,10 @@ namespace Ornek1.Controllers
             }
         }
 
-
+        /// <summary>
+        /// İçeriği açık olan bir çerez oluşturma
+        /// </summary>
+        /// <returns></returns>
         public IActionResult CerezOlustur()
         {
             CookieOptions cerezAyar = new CookieOptions();

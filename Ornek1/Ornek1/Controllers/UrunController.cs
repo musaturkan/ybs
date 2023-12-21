@@ -8,6 +8,7 @@ namespace Ornek1.Controllers
     [Log]
     [Hata]
     [Kontrol]
+  
     public class UrunController : Controller
     {
         List<Yorum> yorumListe = new List<Yorum>
@@ -75,7 +76,9 @@ namespace Ornek1.Controllers
             return View("UrunDetay",urun);
         }
 
-        [HttpGet]
+        [HttpGet]  
+        [YetkiKontrol]
+        [OturumKontrol]
         //[Log]
         public IActionResult UrunEkle()
         {
@@ -86,6 +89,8 @@ namespace Ornek1.Controllers
         }
 
         [HttpPost]
+        [YetkiKontrol]
+        [OturumKontrol]
         public IActionResult UrunEkle(Urun yeniUrun)
         {
             MarketContext model = new MarketContext();
