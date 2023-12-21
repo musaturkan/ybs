@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tTYAJDrnMWg5MdWymSM//UOXGf9kZhdyzYMZ6ay/wHjuUzg5V37Lor4QrnRunhh+peZbqgmAXJi6wmjgKlMSKQ==",
+  "dgSpecHash": "5tv6yAheY3aWUuH8Paq0sXZ8F7Kdsr9bjkY1Rs3+NBprwaox7x3HgelvW+n0HbpjCep2dfmAedJ7RD8TD/m/2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Ornek1\\Ornek1.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

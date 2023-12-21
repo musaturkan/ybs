@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-
+using System.Text.Json;
 namespace Ornek1.Attributes
 {
     public class LogAttribute:ActionFilterAttribute
@@ -16,10 +16,12 @@ namespace Ornek1.Attributes
         
             var parametreListe = context.ActionDescriptor.Parameters;
             if (parametreListe!=null && parametreListe.Count>0)
-            {
+            { 
+                ///todo:parametreleri jsonad dönüştürüp log tablosuna eklenecek.
+                ///
+                string jsonParametre = JsonSerializer.Serialize(context.ActionArguments);
+                yeniLog.Parametre = jsonParametre;
              
-              ///todo:parametreleri jsonad dönüştürüp log tablosuna eklenecek.
-              ///
             }
             model.Log.Add(yeniLog);
             model.SaveChanges();

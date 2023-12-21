@@ -192,3 +192,4 @@ C:\Users\user\Source\Repos\ybs1\Ornek1\Ornek1\obj\Debug\net6.0\Ornek1.dll
 C:\Users\user\Source\Repos\ybs1\Ornek1\Ornek1\obj\Debug\net6.0\ref\Ornek1.dll
 C:\Users\user\Source\Repos\ybs1\Ornek1\Ornek1\obj\Debug\net6.0\Ornek1.pdb
 C:\Users\user\Source\Repos\ybs1\Ornek1\Ornek1\obj\Debug\net6.0\Ornek1.genruntimeconfig.cache
+C:\Users\user\Source\Repos\ybs\Ornek1\Ornek1\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -12,6 +12,7 @@ namespace Ornek1.Controllers
         {
             var cerez = Request.Cookies["Tarih"];
             var userCerez=Request.Cookies["User"];
+            HttpContext.SignOutAsync();
 
             if (cerez != null)
             {
@@ -27,6 +28,12 @@ namespace Ornek1.Controllers
         }
 
 
+        public IActionResult Cikis()
+        {
+            HttpContext.SignOutAsync();
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public IActionResult OturumAc(Models.Oturum_VM kullanici)
         {
@@ -35,30 +42,32 @@ namespace Ornek1.Controllers
             if (oturumKullanici != null)
             {
                 ///Claims based Authorization
-                ///
+                ///Claim nesne listesi oluşturularak saklanmak istenen oturum verileri bu listeye anahtar değer çifti olarak eklenebilri
                 var claims = new List<Claim>();
+
+                claims.Add(new Claim("Id", oturumKullanici.Id.ToString()));
                 claims.Add(new Claim("Ad", oturumKullanici.Ad));
                 claims.Add(new Claim("Soyad", oturumKullanici.Soyad));
                 claims.Add(new Claim("KullaniciAdi", oturumKullanici.KullaniciAdi));
                 claims.Add(new Claim("KayitTarihi", oturumKullanici.KayitTarihi.ToString()));
 
-
+                ///ClaimsIdentiy nesnesi yukarıdaki claims listesi ile oluşturulur
                 var claimsKimlik = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
+                
                 var authenticationProperties = new AuthenticationProperties
                 {
-                    //ExpiresUtc = DateTime.UtcNow,
+                    ExpiresUtc = DateTime.UtcNow.AddDays(1),
                     //IsPersistent = true,
                     //RedirectUri = "";
-                    
+                   
                 };
-
-               HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+              
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claimsKimlik), authenticationProperties);
 
 
 
-                ///TODO:Otrurm çerez ayarları yapılacak
+              
 
 
                 //CookieOptions cerezAyar = new CookieOptions();
