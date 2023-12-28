@@ -18,9 +18,7 @@ namespace Ornek1.Attributes
 
             var parametreListe = context.ActionDescriptor.Parameters;
             if (parametreListe!=null && parametreListe.Count>0)
-            { 
-                ///todo:parametreleri jsonad dönüştürüp log tablosuna eklenecek.
-                ///
+            {                 
                 string jsonParametre = JsonSerializer.Serialize(context.ActionArguments);
                 yeniLog.Parametre = jsonParametre;
              

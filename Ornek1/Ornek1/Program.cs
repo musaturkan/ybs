@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Ornek1.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,8 +24,11 @@ builder.Services.ConfigureApplicationCookie(op =>
     op.Cookie.Name = "Oturum";
 
 });
+builder.Services.AddScoped<HataMiddleware>();
 //builder.Services.AddScoped<IClaimsTransformation,UserClaimProvider>()
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -38,7 +42,7 @@ app.UseCookiePolicy();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -47,5 +51,56 @@ app.UseRouting();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Urun}/{action=Index}/{id?}");
+
+
+
+
+
+//app.UseMiddleware<KontrolMiddleware>();
+
+
+//app.Use(async (context, next) =>
+//{
+//    ///talep gelirken çalýþan kodlar
+//    ///
+
+//    next.Invoke(context);
+//    ///cevap döndürülürüken çalýþan kodlar
+//});
+
+//app.Map("/Oturum", builder =>
+//{
+//    builder.UseMiddleware<LogMiddleware>();
+//});
+
+app.UseMiddleware<HataMiddleware>();
+app.UseLogMiddleware();
+app.UseMiddleware<LogMiddleware>();
+
+/// <summary>
+/// Bazý þartalra göre middleware çalýþtýrýlsýn isteniyorsa MapWhen kullanýlýr
+/// </summary>
+//app.MapWhen(
+//    a => a.Request.Path.Value.Contains("Oturum") && a.Request.Method == "POST"
+//    && a.Request.Form.Count>0,
+//    builder =>
+//{
+//    builder.UseMiddleware<LogMiddleware>();
+//});
+
+
+/// <summary>
+/// Middleware kullanýrken dikkat edilecekler:
+/// Middleware sýnýfý aþaðýdaki özelliklerde olmalýdýr:
+///     RequestDelegate nesnesi cinsinsinde bir member üyesi olmalýdýr
+///     RequestDelegate cinsinden memben üyesi constructer metodundan doldurulmalýdýr
+///     Invoke isimli, parametresi HttpContext olan ve içinde 
+///     reuqestdelegate member üyesinin Invoke metodunu çaðýran bir metot barýndýrmalýdýr. 
+/// Middlaware akýþa dahil edilmesi için program.cs dosyasýnda app.UseMiddlevare metodu kullarýlarak eklenmelidir
+/// app.Map metodu belirli bir adrese göre devreye giren middleware tanýmlamaya yarar
+/// app.MapWhen metodu gelen talebin belli þartlarý kontrol edilerek istenen middlaware devreye alýnmasý için kullanýlýr
+/// Ýstenirse middlaware için extension metot yazýlabilir.
+/// </summary>
+
 
 app.Run();

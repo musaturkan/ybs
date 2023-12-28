@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Ornek1",
+    "\\Ornek1\\Ornek1",
+    "\\Ornek1\\Ornek1\\Controllers"
   ],
-  "SelectedNode": "\\Ornek1.sln",
+  "SelectedNode": "\\Ornek1\\Ornek1.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -19,7 +19,7 @@ namespace DataModel.Market
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = localhost; Database = Market; Trusted_Connection = True; TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server = localhost; Database = Market; Trusted_Connection = True; TrustServerCertificate=True;");
         }
     }
 }
