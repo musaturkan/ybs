@@ -1,5 +1,7 @@
+using Kutuphane;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Extensions.DependencyInjection;
 using Ornek1.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +26,16 @@ builder.Services.ConfigureApplicationCookie(op =>
     op.Cookie.Name = "Oturum";
 
 });
-builder.Services.AddScoped<HataMiddleware>();
+//builder.Services.AddScoped<HataMiddleware>();
+
+builder.Services.AddScoped<IArac,Otomobil>();
+//builder.Services.AddScoped<ILog, VeritabaniLog>();
+//builder.Services.AddScoped<ILog,TextLog>(); 
+//builder.Services.AddTransient<ILog, TextLog>();
+//builder.Services.AddSingleton<ILog, TextLog>(); 
+
+builder.Services.AddScoped<ILog,ServisLog>(p => new ServisLog("http://servis.com"));
+
 //builder.Services.AddScoped<IClaimsTransformation,UserClaimProvider>()
 var app = builder.Build();
 
