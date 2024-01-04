@@ -1,10 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Kutuphane;
+using Microsoft.AspNetCore.Mvc.Filters;
 using System.Text.Json;
 
 namespace Ornek1.Attributes
 {
     public class LogAttribute:ActionFilterAttribute
     {
+
+        //ILog log;
+        //public LogAttribute(ILog log)
+        //{
+        //    this.log = log;
+        //}
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             DataModel.Market.MarketContext model=new DataModel.Market.MarketContext();

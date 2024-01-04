@@ -42,6 +42,7 @@ namespace Ornek1.Controllers
         //  },
         //};
 
+   
         public IActionResult Index()
         {
             ///Entity model nesnesi oluşturulur. Context sınıfı kullanılır

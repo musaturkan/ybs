@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj": {}
+    "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj",
         "projectName": "Kutuphane",
-        "projectPath": "C:\\Users\\user\\source\\repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Kutuphane\\Kutuphane.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\ybs\\Ornek1\\Kutuphane\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\ybs\\Ornek1\\Kutuphane\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

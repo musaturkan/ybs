@@ -15,7 +15,12 @@
       "ProjectGuid": "6355560a-48af-475d-a092-afa459315bcf",
       "DisplayName": "DataModel",
       "ColorIndex": 1
+    },
+    "6ce3145a-71d6-47e0-8270-a6674d1a9420": {
+      "ProjectGuid": "6ce3145a-71d6-47e0-8270-a6674d1a9420",
+      "DisplayName": "Kutuphane",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

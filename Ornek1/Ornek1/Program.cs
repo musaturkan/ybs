@@ -29,7 +29,8 @@ builder.Services.ConfigureApplicationCookie(op =>
 //builder.Services.AddScoped<HataMiddleware>();
 
 builder.Services.AddScoped<IArac,Otomobil>();
-//builder.Services.AddScoped<ILog, VeritabaniLog>();
+//builder.Services.AddScoped<ILog, TextLog>();
+
 //builder.Services.AddScoped<ILog,TextLog>(); 
 //builder.Services.AddTransient<ILog, TextLog>();
 //builder.Services.AddSingleton<ILog, TextLog>(); 

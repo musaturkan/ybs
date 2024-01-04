@@ -6,20 +6,30 @@ namespace Ornek1.Controllers
 {
     public class AracController : Controller
     {
-        private readonly ILog _log;
-        private readonly IArac _arac;
-
-        public AracController(ILog log)
+     
+        ILog _log;
+        IArac _arac;
+       
+        public AracController(ILog log, IArac arac)
         {
             _log = log;
-           // _arac = arac;
-        }
+            _arac = arac;
+          
+         }
 
-        public IActionResult AracKullan()
+        public IActionResult AracKullan([FromServices]IArac arac)
         {
+            arac.HareketEt();
+            _log.Log();
+
             Surucu surucu = new Surucu();
             surucu.Arac = new Otomobil();
+            surucu.Arac.HareketEt();
+            surucu.Arac.Durdur();
+
             surucu.Arac = new Tank();
+            surucu.Arac.Calistir();
+
             //surucu.Otomobil = new Otomobil();
             //surucu.Otomobil.Calistir();
 
@@ -43,6 +53,11 @@ namespace Ornek1.Controllers
 
         public IActionResult Index([FromServices]IArac arac)
         {
+            _log.Log();
+           // LogYonetim log = new LogYonetim(new VeritabaniLog());
+            //VeritabaniLog log = new VeritabaniLog();
+            //log.LogYaz();
+
             arac.HareketEt();
             //TextLog log=new TextLog();
             _log.Log();
