@@ -17,6 +17,7 @@
 
             var user = context.User;
 
+
             //if (user == null)
             //{
             //    return;
