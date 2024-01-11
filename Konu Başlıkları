@@ -24,6 +24,8 @@ View Kullanımı
   Partial View Kullanımı
   View Component
   Layout View Nedir?
+  Razor
+  Model Validation
 Web Form ile Post İşlemleri
   Form Verilerine ulaşmak
   Model Binding
@@ -37,6 +39,7 @@ Cookie, Session İşlemleri
 Oturum İşlemleri
   Authentication, Authorization
   ClaimBased Yetkilendirme
+Routing İşlemleri
 Dependency Inversion Prensibi
 Dependency Injection Pattern
 IoC Nedir?
