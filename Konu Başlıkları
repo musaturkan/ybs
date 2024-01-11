@@ -1,0 +1,50 @@
+Html Nedir?
+  Html Etiketleri
+CSS Nedir?
+  CSS Sınıf tanımlama
+  Id değerine göre css yazma
+  Etiket tütüne göre css yazma
+  Nitelik seçici
+  CSS Seçiciler
+  CSS Geçiş Efektleri
+  CSS media Etikeit
+.Net Core Nedir
+MVC Nedir
+Model Nedir
+View Nedir
+Controller Nedir
+MVC Yaşam Döngüsü
+Action Metot Nedir?
+  Action Metot Geri Dönüş Tipleri
+View Kullanımı
+  Viewe Veri Gönderme
+  ViewBag 
+  ViewData
+  Model ile Veri Taşıma
+  Partial View Kullanımı
+  View Component
+  Layout View Nedir?
+Web Form ile Post İşlemleri
+  Form Verilerine ulaşmak
+  Model Binding
+  HttpPost, HTTP Get Talepleri
+Action Filter Kullanımı
+  ActionFilter Atrribute Yazmak
+  ExeptionFilter Attribute
+  Filtreleri Kullanarak Log Yazma
+Entity Framework Kullanımı
+Cookie, Session İşlemleri
+Oturum İşlemleri
+  Authentication, Authorization
+  ClaimBased Yetkilendirme
+Dependency Inversion Prensibi
+Dependency Injection Pattern
+IoC Nedir?
+Dahili IoC Yapısının Kullanılması
+Transient, Scoped, Singleton Kavramları
+Middleware Kullanımı
+  
+  
+
+
+  
